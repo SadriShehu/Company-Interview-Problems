@@ -1,17 +1,22 @@
 '''
-A surpasser of an element of an array is a greater element to its right, therefore x[j] is a surpasser of x[i] if i < j and x[i] < x[j]. The surpasser count of an element is the number of surpassers.
-Given an array of distinct integers, for each element of the array find its surpasser count i.e. count the number of elements to the right that are greater than that element.
+A surpasser of an element of an array is a greater element to its right, therefore x[j] 
+is a surpasser of x[i] if i < j and x[i] < x[j]. The surpasser count of an element is the number of surpassers.
+Given an array of distinct integers, for each element of the array find its surpasser count 
+i.e. count the number of elements to the right that are greater than that element.
  
 
 Input:
 
-The first line of input contains a single integer T denoting the number of test cases. Then T test cases follow. Each test case consist of two lines. The first line of each test case consists of an integer N, where N is the size of array.
+The first line of input contains a single integer T denoting the number of test cases. 
+Then T test cases follow. Each test case consist of two lines. The first line of each 
+test case consists of an integer N, where N is the size of array.
 The second line of each test case contains N space separated integers denoting array elements.
  
 
 Output:
 
-Corresponding to each test case, in a new line, print the surpasser count i.e. count the number of elements to the right that are greater than that element.
+Corresponding to each test case, in a new line, print the surpasser count i.e. count the 
+number of elements to the right that are greater than that element.
  
 
 Constraints:
