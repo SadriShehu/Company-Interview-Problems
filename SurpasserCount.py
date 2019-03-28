@@ -37,7 +37,7 @@ class surpasserCount():
     testCasesArray = []
     nIntegers = None
  #Initial function
-    def __init__(self, testCases, nIntegers):
+    def __init__(self):
         self.testCases = input('Number of testcases: ')
         self.nIntegers = input('Integer per testcase: ')
         self.fillTestCases()
