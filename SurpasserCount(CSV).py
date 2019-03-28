@@ -58,10 +58,11 @@ class surpasserCount():
                 count = 0
                 k = j
                 while k in range(0, len(i)):
-                    if(i[j]<i[k]):
+                    if(int(i[j])<int(i[k])):
                         count = count + 1
                     k = k + 1
                 surpassers.append(count)
             print(surpassers)
+            
 k = surpasserCount()
 k.surpasser()
