@@ -52,9 +52,13 @@ class surpasserCount():
         
     def fillArray(self):
         array = []
-        for i in range(0, int(self.nIntegers)):
-            nums = input("Insert integer " + str(i) + " to array: ")
-            array.append(int(nums))
+        nums = input("Insert " + str(self.nIntegers) + " integers separated by space: ").split()
+        if(len(nums) > int(self.nIntegers)):
+            print("ERROR!.. You have entered more than " + str(self.nIntegers) + " integers")
+            return self.fillArray()
+        else:
+            for i in nums:
+                array.append(i)
         return array
 
     def surpasser(self):
