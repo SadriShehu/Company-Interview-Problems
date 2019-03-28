@@ -64,7 +64,7 @@ class surpasserCount():
             for i in nums:
                 array.append(i)
         return array
- #Here we impelemnt Insetion Sort Algorithm to check for surpasser values which will increase the 
+ #Here we implemnt Insetion Sort Algorithm to check for surpasser values which will increase the 
  #counter value for 1 every time a surpasser accures in the array.
     def surpasser(self):
         print("Results from testcases: ")
