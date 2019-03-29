@@ -48,7 +48,7 @@ class subArrayWithGivenSum():
             self.testCasesArray.append(self.fillArray())
         print("--------------------------------------------------------")   
         for i in self.testCasesArray:
-            print("TestCase [" + str(self.testCasesArray.index(i)) + "]")
+            print("TestCase [" + str(self.testCasesArray.index(i) + 1) + "]")
             print(i)
         print("--------------------------------------------------------")
 
@@ -86,7 +86,7 @@ class subArrayWithGivenSum():
                     if(subSum == int(self.subSum[self.testCasesArray.index(i)])):
                         count = count + 1
                         print("Testcase [" + str(int(self.testCasesArray.index(i)) + 1) + "]")
-                        print("Solution from position [" + str(j) + "] to [" + str(k) + "]")
+                        print("Solution from position [" + str(j + 1) + "] to [" + str(k + 1) + "]")
                         print("--------------------------------------------------------")
                         stopIteration = True
                     else:
