@@ -35,24 +35,25 @@ class subArrayWithGivenSum():
     testCases = None
     testCasesArray = []
     nIntegers = None
-    subSum = None
+    subSum = []
 
     def __init__(self):
         self.testCases = input('Number of testcases: ')
-        self.SizeSum()
         self.fillTestCases()
         self.subArraySum()
         
     def fillTestCases(self):
         for i in range(0, int(self.testCases)):
-            print("Testcase " + str(i+1))
+            print("Testcase [" + str(i+1) + "]")
             self.testCasesArray.append(self.fillArray())
-        
-        print("TestCases: ")
+        print("--------------------------------------------------------")   
         for i in self.testCasesArray:
+            print("TestCase [" + str(self.testCasesArray.index(i)) + "]")
             print(i)
+        print("--------------------------------------------------------")
 
     def fillArray(self):
+        self.SizeSum()
         array = []
         nums = input("Insert " + str(self.nIntegers) + " integers separated by space: ").split()
         if(len(nums) > int(self.nIntegers) or len(nums) < int(self.nIntegers)):
@@ -64,28 +65,38 @@ class subArrayWithGivenSum():
         return array
     
     def SizeSum(self):
+        self.nIntegers = 0
         nums = input("Insert SIZE of Array and subArray SUM integers separated by space: ").split()
         if(len(nums) > int(2)):
             print("ERROR!.. You have entered more values than what is expected!")
             return self.fillSizeSum()
         else:
             self.nIntegers = nums[0]
-            self.subSum = nums[1]
+            self.subSum.append(nums[1])
 
     def subArraySum(self):
         for i in self.testCasesArray:
             count = 0           
             for j in range(0, len(i)):
                 subSum = 0
+                stopIteration = False
                 k = j
                 while k in range(0, len(i)):
                     subSum = subSum + int(i[k])
-                    if(subSum == int(self.subSum)):
+                    if(subSum == int(self.subSum[self.testCasesArray.index(i)])):
                         count = count + 1
-                        print("Solution " + str(count) + 
-                        " from position [" + str(j) + "] to [" + str(k) + "]")
-                        print(str(subSum))
+                        print("Testcase [" + str(int(self.testCasesArray.index(i)) + 1) + "]")
+                        print("Solution from position [" + str(j) + "] to [" + str(k) + "]")
+                        print("--------------------------------------------------------")
+                        stopIteration = True
                     else:
                         k = k + 1
+                if(stopIteration == True):
+                    subSum = int(self.subSum[self.testCasesArray.index(i)])
+                    break
+            if(subSum != int(self.subSum[self.testCasesArray.index(i)])):
+                print("Testcase [" + str(int(self.testCasesArray.index(i)) + 1) + "]")
+                print("-1")
+                print("--------------------------------------------------------")       
 
 k = subArrayWithGivenSum()
