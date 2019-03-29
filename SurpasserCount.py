@@ -57,7 +57,7 @@ class surpasserCount():
     def fillArray(self):
         array = []
         nums = input("Insert " + str(self.nIntegers) + " integers separated by space: ").split()
-        if(len(nums) > int(self.nIntegers)):
+        if(len(nums) > int(self.nIntegers) or len(nums) < int(self.nIntegers)):
             print("ERROR!.. You have entered more than " + str(self.nIntegers) + " integers")
             #recusrive function
             return self.fillArray()
