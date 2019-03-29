@@ -51,8 +51,8 @@ class subArrayWithGivenSum():
     def fillArray(self):
         array = []
         nums = input("Insert " + str(self.nIntegers) + " integers separated by space: ").split()
-        if(len(nums) > int(self.nIntegers)):
-            print("ERROR!.. You have entered more than " + str(self.nIntegers) + " integers")
+        if(len(nums) > int(self.nIntegers) or len(nums) < int(self.nIntegers)):
+            print("ERROR!.. You have entered more/less than " + str(self.nIntegers) + " integers")
             return self.fillArray()
         else:
             for i in nums:
@@ -74,17 +74,14 @@ class subArrayWithGivenSum():
             for j in range(0, len(i)):
                 subSum = 0
                 k = j
-                if(subSum != int(self.subSum)):
-                    while k in range(0, len(i)):
-                        subSum = subSum + int(i[k])
-                        if(subSum != int(self.subSum)):
-                            k = k + 1
-                        else:
-                            count = count + 1
-                            print("Solution " + str(count) + 
-                            " from position [" + str(j) + "] to [" + str(k) + "]")
-                            print(str(subSum))
-                else:
-                    print('-1')
+                while k in range(0, len(i)):
+                    subSum = subSum + int(i[k])
+                    if(subSum == int(self.subSum)):
+                        count = count + 1
+                        print("Solution " + str(count) + 
+                        " from position [" + str(j) + "] to [" + str(k) + "]")
+                        print(str(subSum))
+                    else:
+                        k = k + 1
 
 k = subArrayWithGivenSum()
