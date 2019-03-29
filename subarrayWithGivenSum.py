@@ -67,9 +67,9 @@ class subArrayWithGivenSum():
     def SizeSum(self):
         self.nIntegers = 0
         nums = input("Insert SIZE of Array and subArray SUM integers separated by space: ").split()
-        if(len(nums) > int(2)):
-            print("ERROR!.. You have entered more values than what is expected!")
-            return self.fillSizeSum()
+        if(len(nums) > int(2) or len(nums) < int(2)):
+            print("ERROR!.. You have entered more/less values than what is expected!")
+            return self.SizeSum()
         else:
             self.nIntegers = nums[0]
             self.subSum.append(nums[1])
