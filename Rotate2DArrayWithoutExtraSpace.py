@@ -52,7 +52,7 @@ class rotate2DArray():
     def __init__(self):
         self.testCases = input('Number of testcases: ')
         self.fillTestCases()
-        self.printMatrix()
+        self.rotateArray()
 
     def fillTestCases(self):
         for i in range(0, int(self.testCases)):
@@ -80,7 +80,7 @@ class rotate2DArray():
                 array.append(subArray)
         return array
         
-    def printMatrix(self):
+    def rotateArray(self):
         for i in self.testCasesArray:
             for j in range(0, int(int(self.nIntegers)/2)):
                 for k in range(j, int(int(self.nIntegers) - j - 1)):
