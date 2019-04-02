@@ -61,10 +61,10 @@ class ListNode:
         return curr  # Will be None if not foun
 
     def printList(self): 
-        temp = self.head 
-        while(temp): 
-            print(temp.val,'->', end = ' ')
-            temp = temp.next
+        curr = self.head 
+        while(curr): 
+            print(curr.val,'->', end = ' ')
+            curr = curr.next
         print('NONE')
 
     def reverse(self):
