@@ -58,7 +58,7 @@ class ListNode:
         curr = self.head
         while curr and curr.val != key:
             curr = curr.next
-        return curr  # Will be None if not foun
+        return curr  # Will be None if not found
 
     def printList(self): 
         curr = self.head 
