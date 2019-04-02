@@ -58,13 +58,13 @@ class ListNode:
         curr = self.head
         while curr and curr.val != key:
             curr = curr.next
-        return curr  # Will be None if not foun
+        return curr  # Will be None if not found
 
     def printList(self): 
-        temp = self.head 
-        while(temp): 
-            print(temp.val,'->', end = ' ')
-            temp = temp.next
+        curr = self.head 
+        while(curr): 
+            print(curr.val,'->', end = ' ')
+            curr = curr.next
         print('NONE')
 
     def reverse(self):
